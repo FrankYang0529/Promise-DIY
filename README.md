@@ -7,3 +7,5 @@ Promise! Do It Yourself!
 ```
 npm test
 ```
+
+![Promise-DIY test result](https://github.com/FrankYang0529/Promise-DIY/blob/master/PromiseDIY-test.gif?raw=true)
