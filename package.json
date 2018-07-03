@@ -1,0 +1,22 @@
+{
+  "name": "promise-diy",
+  "version": "1.0.0",
+  "description": "Promise DIY",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrankYang0529/Promise-DIY.git"
+  },
+  "keywords": [
+    "Promise"
+  ],
+  "author": "Frank Yang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrankYang0529/Promise-DIY/issues"
+  },
+  "homepage": "https://github.com/FrankYang0529/Promise-DIY#readme"
+}
