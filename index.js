@@ -127,7 +127,7 @@ class PromiseDIY {
 let promiseResolutionProcedure = (promise, x, resolve, reject) => {
   // 2.3.1 If promise and x refer to the same object, reject promise with a TypeError as the reason.
   if (promise === x) {
-    throw new TypeError('Chaining cycle detected for promise')
+    reject(new TypeError('Chaining cycle detected for promise'))
   }
 
   let called
@@ -183,14 +183,14 @@ let promiseResolutionProcedure = (promise, x, resolve, reject) => {
   }
 }
 
-// For promises-aplus-tests
-PromiseDIY.defer = PromiseDIY.deferred = function () {
-  let dfd = {}
-  dfd.promise = new PromiseDIY((resolve, reject) => {
-    dfd.resolve = resolve
-    dfd.reject = reject
+// For promises-aplus-tests only
+PromiseDIY.deferred = function () {
+  let deferred = {}
+  deferred.promise = new PromiseDIY((resolve, reject) => {
+    deferred.resolve = resolve
+    deferred.reject = reject
   })
-  return dfd
+  return deferred
 }
 
 module.exports = PromiseDIY
